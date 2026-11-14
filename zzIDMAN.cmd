@@ -374,7 +374,6 @@ echo:
 echo:               Insta: zzeriso
 echo:               Git: https://github.com/zzeriso/IDMAN
 echo:            -------------------------------------------- 
-echo:                                                               
 echo:               [1] Activate IDM
 echo:               [2] Freeze Trial Period
 echo:               [3] Reset Activation / Trial   
