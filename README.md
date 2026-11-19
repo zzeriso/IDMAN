@@ -2,7 +2,7 @@
 
 A single-file batch utility for managing Internet Download Manager on Windows: locate the installation, launch and close it, run read-only diagnostics, and manage trial/activation state — all from one menu.
 
-Maintained by ZERISO — https://github.com/zzeriso/IDMAN
+Maintained by ZERISO — https://github.com/zzeriso
 
 ## Features
 
@@ -58,7 +58,7 @@ Exports the CLSID keys to `%SystemRoot%\Temp`, deletes the stored activation and
 - Backups are timestamped and can be re-imported by hand.
 
 **8 — Open official IDM download page**
-**9 — Open official IDM website**
+**9 — Help - "This Site: Github" - and ZERISO**
 **0 — Exit**
 
 ## Command-Line Options
