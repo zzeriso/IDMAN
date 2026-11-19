@@ -9,7 +9,8 @@
 ::   IDM Activation Script (IAS)
 ::
 ::   Git: https://github.com/zzeriso/IDMAN
-::   Insta: zzeriso
+::             
+::   Insta: ZZERISO
 ::
 ::
 ::============================================================================
@@ -62,7 +63,7 @@ exit /b
 ::========================================================================================================================================
 
 set "blank="
-set "mas=https://github.com/zzeriso/IDMAN"
+set "mas=https://github.com/lstprjct/IDM-Activation-Script/wiki/"
 
 ::  Check if Null service is working, it's important for the batch script
 
@@ -369,8 +370,8 @@ if not defined terminal mode 75, 28
 
 echo:
 echo:
-call :_color2 %_White% "             " %_Green% "By Your Fav ZERISO " 
-echo:
+call :_color2 %_White% "             " %_Green% "By Your Fav ZERISO"
+echo:            -------------------------------------------- 
 echo:               Insta: zzeriso
 echo:               Git: https://github.com/zzeriso/IDMAN
 echo:            -------------------------------------------- 
@@ -382,7 +383,7 @@ echo:               [5] Help ZERISO!!!!
 echo:               [0] Exit [BUH-BYE ZERISO]
 echo:            --------------------------------------------
 echo:         
-call :_color2 %_White% "             " %_Green% "SELECT AN OPTION USING YOUR KEYBOARD FROM [1,2,3,4,5,0]"
+call :_color2 %_White% "             " %_Green% "Enter a menu option in the Keyboard [1,2,3,4,5,0]"
 choice /C:123450 /N
 set _erl=%errorlevel%
 
