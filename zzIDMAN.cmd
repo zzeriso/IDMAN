@@ -8,7 +8,7 @@ rem IDMAN Utility + IDM Activation Script (IAS)
 rem Maintained by ZERISO
 rem Detect, launch, close, diagnostics, download page,
 rem plus Activate / Freeze Trial / Reset via the IAS engine.
-rem Git: https://github.com/zzeriso/IDMAN
+rem Git: https://github.com/zzeriso
 rem ============================================================================
 
 set "iasver=1.3"
