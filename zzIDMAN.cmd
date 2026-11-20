@@ -1,19 +1,19 @@
 @echo off
 setlocal EnableExtensions DisableDelayedExpansion
 title IDMAN Utility - ZERISO
-color 07
+color 0D
 
 rem ============================================================================
 rem IDMAN Utility + IDM Activation Script (IAS)
 rem Maintained by ZERISO
 rem Detect, launch, close, diagnostics, download page,
 rem plus Activate / Freeze Trial / Reset via the IAS engine.
-rem Git: https://github.com/zzeriso
+rem Git: https://github.com/zzeriso/IDMAN
 rem ============================================================================
 
 set "iasver=1.3"
 set "OFFICIAL_URL=https://www.internetdownloadmanager.com/download.html"
-set "OFFICIAL_SITE=https://github.com/zzeriso/IDMAN"
+set "OFFICIAL_SITE=https://github.com/zzeriso"
 set "REPO_URL=https://github.com/zzeriso/IDMAN"
 
 ::  To activate, run the script with "/act" parameter or change 0 to 1 in below line
@@ -104,21 +104,19 @@ if %winbuild% LSS 10586 set _NCS=0
 if %winbuild% GEQ 10586 reg query "HKCU\Console" /v ForceV2 %nul2% | find /i "0x0" %nul1% && (set _NCS=0)
 if %_NCS% EQU 1 (
 for /F %%a in ('echo prompt $E ^| cmd') do set "esc=%%a"
-set     "Red="41;97m""
-set    "Gray="100;97m""
-set   "Green="42;97m""
-set    "Blue="44;97m""
-set  "_White="40;37m""
+set    "Gray="100;95m""
+set  "_White="40;95m""
 set  "_Green="40;92m""
 set "_Yellow="40;93m""
+set "_Purple="40;95m""
+set "_PurpleB="45;97m""
 ) else (
-set     "Red="Red" "white""
-set    "Gray="Darkgray" "white""
-set   "Green="DarkGreen" "white""
-set    "Blue="Blue" "white""
-set  "_White="Black" "Gray""
+set    "Gray="Darkgray" "Magenta""
+set  "_White="Black" "Magenta""
 set  "_Green="Black" "Green""
 set "_Yellow="Black" "Yellow""
+set "_Purple="Black" "Magenta""
+set "_PurpleB="Magenta" "White""
 )
 set "nceline=echo: &echo ==== ERROR ==== &echo:"
 set "eline=echo: &call :_color %Red% "==== ERROR ====" &echo:"
@@ -284,13 +282,14 @@ if %_freeze%==1 (set frz=1&goto :_activate)
 ::========================================================================================================================================
 :MENU
 cls
+color 05
 title  IDMAN Utility - ZERISO
 if not defined terminal mode 92, 45 2>nul
 call :DetectIDM
 echo:
-echo ================================================================
-call :_color2 %_White% "  IDMAN UTILITY  " %_Green% "  By ZERISO"
-echo ================================================================
+call :_color %_Purple% "================================================================"
+call :_color2 %_PurpleB% "                    IDMAN UTILITY By ZERISO                     "
+call :_color %_Purple% "================================================================"
 echo:
 if defined IDM_EXE (
 echo  IDM status   : Installed
@@ -302,20 +301,20 @@ echo  IDM status   : Not detected
 if defined IDM_SERIAL (echo  Registration : !IDM_SERIAL!) else (echo  Registration : no serial set)
 if defined IDM_FREEZE echo  Trial freeze : !IDM_FREEZE!
 echo:
-echo ----------------------------------------------------------------
-echo  [1] Launch Internet Download Manager
-echo  [2] Close IDM
-echo  [3] Refresh installation detection
-echo  [4] Run system and IDM diagnostics
-echo  [5] Activate IDM [registration]
-echo  [6] Freeze 30 day trial period
-echo  [7] Reset activation / trial
-echo  [8] Open official IDM download page
-echo  [9] Help - Site - ZERISO
-echo  [0] Exit [BUH-BYE ZERISO!!!]
-echo ----------------------------------------------------------------
+call :_color %_Purple% "----------------------------------------------------------------"
+call :_color %_Purple% "  [1] Launch Internet Download Manager"
+call :_color %_Purple% "  [2] Close IDM"
+call :_color %_Purple% "  [3] Refresh installation detection"
+call :_color %_Purple% "  [4] Run system and IDM diagnostics"
+call :_color %_Purple% "  [5] Activate IDM [registration]"
+call :_color %_Purple% "  [6] Freeze 30 day trial period"
+call :_color %_Purple% "  [7] Reset activation / trial"
+call :_color %_Purple% "  [8] Open official IDM download page"
+call :_color %_Purple% "  [9] Help - ZERISO GITHUB"
+call :_color %_Purple% "  [0] Exit [BUH-BYE ZERISO!!!]"
+call :_color %_Purple% "----------------------------------------------------------------"
 echo:
-call :_color2 %_White% "  Repo: " %_Green% "!REPO_URL!"
+call :_color2 %_Purple% "  Repo: " %_Green% "!REPO_URL!"
 echo:
 choice /C 1234567890 /N /M " Select an option: "
 if errorlevel 10 goto :END
