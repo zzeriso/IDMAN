@@ -20,7 +20,7 @@ Maintained by ZERISO — https://github.com/zzeriso
 ## Installation & Usage
 
 1. Install a fresh copy of [Internet Download Manager](https://www.internetdownloadmanager.com/).
-2. Download `zzIDMAN.cmd`.
+2. Download `IDMAN.cmd`.
 3. Place it in a permanent folder — not inside an archive, and not in `%TEMP%`.
 4. Right-click and choose **Run as administrator**.
 5. Pick an option from the menu.
