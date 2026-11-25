@@ -3,7 +3,7 @@
 A single-file Windows batch utility for managing Internet Download Manager (IDM). It provides installation detection, installation, launch and process management, system diagnostics, and registry-based trial and activation management — all through a simple menu.
 
 Maintained by **ZERISO** — [ZERISO](https://github.com/zzeriso)
-Repo **IDMAN** Link: — [IDMAN](https://github.com/zzeriso)
+Repo **IDMAN** Link: — [IDMAN](https://github.com/zzeriso/IDMAN)
 
 ## Changelog
 
