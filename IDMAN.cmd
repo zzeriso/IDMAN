@@ -340,12 +340,6 @@ echo  IDM status   : Not detected
 if defined IDM_SERIAL (echo  Registration : !IDM_SERIAL!) else (echo  Registration : no serial set)
 if defined IDM_FREEZE echo  Trial freeze : !IDM_FREEZE!
 ::----------------------------------------------------------------
-rem call :_color %_Green% " [C] Changelog"
-rem call :_color %_Green% " IDMAN version: 4.0"
-rem call :_color %_Green% " updates:"
-rem call :_color %_Green% " fixes:"
-rem call :_color %_Green% " new features:"
-::----------------------------------------------------------------
 call :_color %_Purple% "----------------------------------------------------------------"
 call :_color %_Purple% "  [1] Launch Internet Download Manager"
 call :_color %_Purple% "  [2] Close IDM"
