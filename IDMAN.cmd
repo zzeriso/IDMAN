@@ -4,7 +4,7 @@ title IDMAN Utility - ZERISO
 color 0D
 
 ::----------------------------------------------------------------------------
-::  IDMAN Utility + IDM Activation Script (IAS)
+::  IDMAN - an IDM Activation Script (IAS)
 ::  Maintained by ZERISO  --  Git: https://github.com/zzeriso/IDMAN
 ::
 ::  Detect, launch, close, diagnose, install,
