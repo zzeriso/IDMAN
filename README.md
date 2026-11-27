@@ -7,7 +7,7 @@ Repo **IDMAN** Link: — [IDMAN](https://github.com/zzeriso/IDMAN)
 
 ## Changelog
 
-**Version 3.4**
+**Version 3.5**
 
 - Reorganized the script into numbered sections.
 - Restored the WindowsApps directory to `PATH`.
